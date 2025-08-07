@@ -1,0 +1,65 @@
+<h1 class="quoter__title">Cotizador de Prima Vehicular</h1>
+<main>
+    <form class="form" [formGroup]="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Selecciona la marca de tu vehiculo</mat-label>
+            <mat-select formControlName="brand">
+                @for (option of filteredBrands(); track option) {
+                    <mat-option [value]="option"> {{option}} </mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Selecciona tu modelo de auto</mat-label>
+            <mat-select formControlName="model">
+                @for (option of filteredModels(); track option) {
+                    <mat-option [value]="option.model"> {{option.model}} </mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Año del Vehiculo</mat-label>
+            <input formControlName="year" type="number" matInput  placeholder="...">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Edad del conductor</mat-label>
+            <input formControlName="driverAge" type="number" matInput  placeholder="...">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Valor del vehiculo</mat-label>
+            <input formControlName="value" type="number" matInput  placeholder="...">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Tipo de uso</mat-label>
+            <mat-select formControlName="useType">
+                <mat-option [value]="'personal'"> Personal </mat-option>
+                <mat-option [value]="'trabajo'"> Trabajo </mat-option>
+                <mat-option [value]="'carga'"> Carga </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" (click)="onSubmit()">COTIZAR</button>
+    </form>
+    <div class="result">
+        <div class="result__img">
+            @if (imageUrl()) {
+                <img [src]="imageUrl()" alt="Car Insurance">
+            }
+        </div>
+        <div class="result__resume">
+            <p>Precio base: <span> {{quoteData().basePrima | currency:'S/':'symbol':'1.2-2'}} </span></p>
+            <span>Montos adicionales aplicados:</span>
+            <hr>
+            <p>Edad del conductor: <span> {{quoteData().ageAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+            <p>Tipo de uso: <span> {{quoteData().useTypeAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+            <p>Riesgo del vehiculo: <span> {{quoteData().brandModelAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+            <p>Precio final: <span> <b>{{quoteData().primaFinal | currency:'S/':'symbol':'1.2-2'}}</b> </span></p>
+
+        </div>
+    </div>
+</main>

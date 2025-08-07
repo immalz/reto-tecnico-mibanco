@@ -1,0 +1,60 @@
+<h2 mat-dialog-title>
+    {{data.title}}
+</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="form" class="form">
+      <div class="form__inputs">
+        <p>
+          <mat-form-field appearance="outline">
+              <mat-label>Marca</mat-label>
+              <mat-select formControlName="brand" (selectionChange)="onBrandChange($event.value)">
+                @for (brand of _store.brands(); track $index) {
+                  <mat-option [value]="brand">{{brand}}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Modelo</mat-label>
+                <mat-select formControlName="model" (selectionChange)="onModelChange($event.value)">
+                  @for (model of _store.modelsByBrand(); track $index) {
+                    <mat-option [value]="model">{{ model }}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p class="actions">
+          @if (data.title.includes('Agregar')) {
+            <button [disabled]="form.invalid || !loading" mat-raised-button color="primary" (click)="createVehicle()"> 
+              Registrar
+            </button>
+          } @else {
+            <button [disabled]="form.invalid || !loading" mat-raised-button color="primary" (click)="updateVehicle()"> 
+              Actualizar
+            </button>
+          }
+        </p>
+      </div>
+      <div class="form__image">
+        <input
+          type="file"
+          accept="image/webp,image/png"
+          id="file-input"
+          (change)="onFileChange($event)"
+          [attr.title]="previewUrl ? 'Actualizar imagen' : 'Seleccionar imagen'"
+        />
+        @if (previewUrl) {
+          <label for="file-input">
+            <img [ngSrc]="previewUrl" width="400" height="250" alt="Car Insurance">
+          </label>
+        }
+        @else {
+          <label class="input__button" for="file-input">
+            Seleccionar imagen
+          </label>
+        }
+      </div>
+    </form>
+</mat-dialog-content>

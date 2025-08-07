@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+main {
+    width: 100%;
+    height: calc(100vh - 140px);
+    box-sizing: border-box;
+    display: flex;
+
+    section {
+        width: 100%;
+        background-color: $color-bg-secondary;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+}

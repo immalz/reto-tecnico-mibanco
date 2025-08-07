@@ -1,0 +1,19 @@
+<div class="main">
+    @for (quote of quotesData(); track $index) {
+        <div class="result">
+            <div class="result__img">
+                <img [ngSrc]="quote.image!" width="400" height="250" alt="Car Insurance">
+            </div>
+            <div class="result__resume">
+                <p>Precio base: <span> {{quote.basePrima | currency:'S/':'symbol':'1.2-2'}} </span></p>
+                <span>Montos adicionales aplicados:</span>
+                <hr>
+                <p>Edad del conductor: <span> {{quote.ageAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+                <p>Tipo de uso: <span> {{quote.useTypeAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+                <p>Riesgo del vehiculo: <span> {{quote.brandModelAdjustmentAmount | currency:'S/':'symbol':'1.2-2'}} </span></p>
+                <p>Precio final: <span> <b>{{quote.primaFinal | currency:'S/':'symbol':'1.2-2'}}</b> </span></p>
+    
+            </div>
+        </div>
+    }
+</div>

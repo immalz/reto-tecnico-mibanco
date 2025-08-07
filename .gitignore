@@ -1,0 +1,43 @@
+# Node modules
+**/node_modules/
+
+# Output Angular builds
+**/dist/
+**/out-tsc/
+
+# System files
+**/.DS_Store
+**/Thumbs.db
+
+# Angular CLI cache
+**/.angular/cache/
+
+# IDE settings
+**/.vscode/
+**/.idea/
+
+# Compiled TypeScript
+**/*.tsbuildinfo
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/pnpm-debug.log*
+
+# Docker artifacts
+**/docker-output/
+**/tmp/
+**/*.pid
+
+# OS junk files
+**/.Trash-*
+
+# Optional: ignore lock files if no locking strategy enforced
+# **/package-lock.json
+# **/pnpm-lock.yaml
+
+# Ignore coverage reports
+**/coverage/
+
+# Optional: ignore nginx folders if generated or copied
+nginx/

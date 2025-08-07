@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: $color-bg-primary;
+    border-right: 1px solid $color-line;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__menu {
+        p {
+            margin: 10px 0;
+            color: $color-text-muted;
+            font-size: 0.9rem;
+        }
+
+        &--item {
+            height: 60px;
+            transition: 0.2s linear;
+            border-radius: 0 1rem 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 10px;
+            color: $color-text-muted;
+            cursor: pointer;
+
+            .mat-icon {
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &--item:hover, &--item.active {
+            background-color: $color-bg-hover;
+            color: $color-text-primary;
+        }
+    }
+
+    &__button {
+        height: 50px;
+        // position: absolute;
+        bottom: 20px;
+
+        button {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $color-error;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+}

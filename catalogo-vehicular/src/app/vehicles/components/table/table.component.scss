@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+.filter {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+
+    .mat-mdc-form-field {
+        width: 100%;
+    }
+
+
+
+    button {
+        width: 200px;
+        height: 56px;
+        background-color: $color-bg-dark;
+        color: #fff;
+        border-radius: 1rem;
+    }
+    
+}
+
+.mat-icon {
+    cursor: pointer;
+}
+
+table {
+    color: $color-text-primary;
+    .mat-icon:nth-child(2) {
+        color: $color-error;
+    }
+}
+
+.rounded-table {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.notFound {
+    padding: 10px;
+}
+

@@ -1,0 +1,27 @@
+main {
+    width: 100%;
+    height: calc(100vh - 140px);
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    .form {
+        width: 450px;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+            text-align: center; 
+         }
+    
+        .register {
+            color: #56d1a2;
+            cursor: pointer;
+        }
+    }
+    
+    
+    mat-form-field {
+        width: 100%;
+    }
+}

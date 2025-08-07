@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>
+    {{data.title}}
+</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="form">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Marca</mat-label>
+                <mat-select formControlName="brand">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Modelo</mat-label>
+                <mat-select formControlName="model">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Año</mat-label>
+              <input matInput placeholder="año del vehiculo..." formControlName="year">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo de uso</mat-label>
+                <mat-select formControlName="usageType">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p class="actions">
+            <button mat-raised-button color="primary"> {{data.title.includes('Editar') ? 'Actualizar' : 'Registrar'}} </button>
+        </p>
+    </form>
+</mat-dialog-content>

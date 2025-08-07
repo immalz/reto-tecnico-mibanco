@@ -1,0 +1,24 @@
+<div class="sidebar">
+    <div class="sidebar__menu">
+        <p>PRINCIPAL</p>
+        <div class="sidebar__menu--item" [routerLink]="['/dashboard/vehiculos']" routerLinkActive="active" >
+            <mat-icon>directions_car</mat-icon>
+            <span>Vehiculos</span>
+        </div>
+        <p>CATEGORIAS</p>
+        <div class="sidebar__menu--item" routerLinkActive="active" >
+            <mat-icon>loyalty</mat-icon>
+            <span>Marcas</span>
+        </div>
+        <div class="sidebar__menu--item" routerLinkActive="active" >
+            <mat-icon>commute</mat-icon>
+            <span>Modelos</span>
+        </div>
+    </div>
+    <div class="sidebar__button">
+        <button (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Salir de la cuenta
+        </button>
+    </div>
+</div>

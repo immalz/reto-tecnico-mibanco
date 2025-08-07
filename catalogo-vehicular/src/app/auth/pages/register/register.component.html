@@ -1,0 +1,40 @@
+<main>
+    <div class="form">
+        <h2>Registrarse</h2>
+        <form [formGroup]="form" (ngSubmit)="register()">
+            <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Correo Electrónico</mat-label>
+                  <input matInput placeholder="correo electronico..." formControlName="email">
+                  <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <mat-label>Ingresa tu contraseña</mat-label>
+                    <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="contraseña..." formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                      <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <mat-label>Repetir contraseña</mat-label>
+                    <input matInput [type]="hideSecondPassword ? 'password' : 'text'" placeholder="contraseña..." formControlName="repeatPassword">
+                    <button mat-icon-button matSuffix (click)="hideSecondPassword = !hideSecondPassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideSecondPassword">
+                      <mat-icon>{{hideSecondPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+            </p>
+    
+            @if(form.hasError('mismatch') && form.get('repeatPassword')?.touched) {
+                Las contraseñas no coinciden.
+            }
+            <p [routerLink]="['/acceso']" routerLinkActive="router-link-active" >¿Ya tienes una cuenta? <span class="register">Inicia Sesión...</span></p>
+            <p class="actions">
+                <button mat-raised-button color="primary" type="submit"> Registrarse </button>
+            </p>
+        </form>
+    </div>
+</main>

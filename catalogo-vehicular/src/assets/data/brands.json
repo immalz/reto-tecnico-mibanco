@@ -1,0 +1,62 @@
+[
+    {
+      "brand": "Toyota",
+      "models": ["Corolla", "Yaris", "Hilux", "Camry", "RAV4", "Land Cruiser", "Prius"]
+    },
+    {
+      "brand": "Honda",
+      "models": ["Civic", "Fit", "CR-V", "Accord", "HR-V", "Pilot"]
+    },
+    {
+      "brand": "Ford",
+      "models": ["Focus", "Fiesta", "Ranger", "Explorer", "Mustang", "Escape"]
+    },
+    {
+      "brand": "Chevrolet",
+      "models": ["Aveo", "Sail", "Onix", "Tracker", "Equinox", "Cruze", "Captiva"]
+    },
+    {
+      "brand": "Hyundai",
+      "models": ["Accent", "Elantra", "Tucson", "Santa Fe", "Creta", "Kona"]
+    },
+    {
+      "brand": "Kia",
+      "models": ["Rio", "Picanto", "Sportage", "Sorento", "Cerato", "Seltos"]
+    },
+    {
+      "brand": "Nissan",
+      "models": ["Versa", "Sentra", "March", "X-Trail", "Frontier", "Altima"]
+    },
+    {
+      "brand": "Volkswagen",
+      "models": ["Gol", "Jetta", "Polo", "Tiguan", "Amarok", "Passat"]
+    },
+    {
+      "brand": "Mazda",
+      "models": ["Mazda 2", "Mazda 3", "CX-3", "CX-5", "CX-9", "BT-50"]
+    },
+    {
+      "brand": "Renault",
+      "models": ["Kwid", "Logan", "Duster", "Sandero", "Captur", "Stepway"]
+    },
+    {
+      "brand": "Peugeot",
+      "models": ["208", "2008", "3008", "308", "5008"]
+    },
+    {
+      "brand": "Subaru",
+      "models": ["Impreza", "Forester", "Outback", "XV", "Legacy"]
+    },
+    {
+      "brand": "BMW",
+      "models": ["Serie 1", "Serie 3", "Serie 5", "X1", "X3", "X5"]
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "models": ["Clase A", "Clase C", "Clase E", "GLA", "GLC", "GLE"]
+    },
+    {
+      "brand": "Audi",
+      "models": ["A1", "A3", "A4", "Q2", "Q3", "Q5"]
+    }
+  ]
