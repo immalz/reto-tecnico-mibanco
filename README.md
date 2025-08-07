@@ -18,15 +18,15 @@ Asegúrate de tener instalado lo siguiente en tu entorno:
 1. **Clonar el repositorio o descargar los archivos**
 2. Instalar pnpm
    ```bash
-   npm install -g pnpm
+      npm install -g pnpm
+   ```
 3. Abrir una terminal en la raíz de cada carpeta (`cotizador-vehicular` y `catalogo-vehicular`) y ejecutar:
-
-  ```bash
-    pnpm install
-  ```
+   ```bash
+      pnpm install
+   ```
 4. Generar el build de cada proyecto con el comando:
    ```bash
-    ng build
+      ng build
    ```
 5. Generar la imagen de docker de cada proyecto con el comando:
    ```bash
